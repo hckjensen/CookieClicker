@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+
+@mixin border($color: #45fc45, $width: 2px, $style: solid){
+
+    border: {
+        color: $color;
+        width: $width;
+        style: $style;
+    }
+    border-radius: 10px;
+}
+
+@mixin standardGrid($columns: 2, $gap: 1em) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}

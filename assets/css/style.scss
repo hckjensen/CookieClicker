@@ -1,0 +1,143 @@
+@import "./mixins.scss";
+@import "./functions.scss";
+@import "./variables.scss";
+@import "./keyframes.scss";
+
+
+
+//Styling
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $background;
+    height: 100vh;
+}
+
+
+#colorpicker{
+    position: absolute;
+    display: flex;
+    top: 2%;
+    right: 2%;
+    padding: 20px;
+    background-color: $menuColor;
+    box-shadow: $menuShadow;
+    @include border(white, 5px, dashed);
+    
+
+    .colorGrid{
+        @include standardGrid(2, 20px);
+        @for $i from 1 through 8 {
+            .colorpickItem:nth-child(#{$i}) {
+                background-color: getRandomColor();
+            }
+        }
+        
+        .colorpickItem{
+            height: 80px;
+            width: 80px;
+            cursor: pointer;
+            user-select: none;
+            @include border(none, 0);
+            &:hover {
+                transform: scale(1.05);
+            }
+            &:active {
+                animation: pulse 0.1s;
+            }
+            
+        }
+    
+    }
+
+    #randomize{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: -50px;
+        left: 50%;
+        translate: -50%;
+        color: $textColor;
+        text-transform: uppercase;
+        cursor: pointer;
+        user-select: none;
+        background-color: $menuColor;
+        height: 40px;
+        width: 150px;
+        @include border($textColor, 1px, solid)
+    }
+    
+}
+
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100%;
+    color:$textColor;
+
+    .left-container{
+        @include border();
+
+        
+    }
+    
+    .middle-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        padding-top: 100px;
+
+        .dollars{
+            padding-bottom: 50px;
+            cursor: default;
+            user-select: none;
+            font-size: 2em;
+            // text-shadow: 2px 2px 2px #ffffff;
+        }
+
+        .circle{
+            height: $circleHeight;
+            width: $circleWidth;
+            background-color: $circleColor;
+            border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            cursor: pointer;
+            &:active{
+                animation: pulse 0.1s;
+            }
+        }
+
+        .bottom-menu{
+            position: absolute;
+            bottom: 0;
+            @include border($textColor, 3px);
+            border-bottom: none;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: $menuShadow;
+            width: 100%;
+            height: 20%;
+            background-color: $menuColor;
+
+
+        }
+    }
+    
+
+}
+
+
+
+
+
+

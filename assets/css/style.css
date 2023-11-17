@@ -3,7 +3,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.31);
+    transform: scale(1.02);
   }
   100% {
     transform: scale(1);
@@ -42,28 +42,28 @@ body {
   margin: auto;
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(1) {
-  background-color: rgb(168, 85, 18);
+  background-color: rgb(221, 120, 235);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(2) {
-  background-color: rgb(56, 84, 137);
+  background-color: rgb(83, 4, 83);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(3) {
-  background-color: rgb(91, 83, 151);
+  background-color: rgb(44, 252, 38);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(4) {
-  background-color: rgb(139, 119, 176);
+  background-color: rgb(208, 6, 63);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(5) {
-  background-color: rgb(169, 172, 203);
+  background-color: rgb(26, 94, 182);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(6) {
-  background-color: rgb(111, 201, 71);
+  background-color: rgb(20, 175, 118);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(7) {
-  background-color: rgb(227, 205, 103);
+  background-color: rgb(197, 3, 40);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(8) {
-  background-color: rgb(195, 134, 160);
+  background-color: rgb(118, 158, 65);
 }
 #colorpicker .colorGrid .colorpickItem {
   height: 80px;
@@ -112,14 +112,14 @@ body {
   height: 100%;
   color: #45fc45;
 }
-.main-container .left-container #upgrades-container {
+.main-container .left-container #idle-container {
   display: flex;
   gap: 20px;
   flex-direction: column;
   margin-top: 20px;
   margin-left: 20px;
 }
-.main-container .left-container #upgrades-container .upgradeItem {
+.main-container .left-container #idle-container .idle-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -136,8 +136,11 @@ body {
   background-color: #1b1a1a;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-.main-container .left-container #upgrades-container .upgradeItem:hover {
+.main-container .left-container #idle-container .idle-item:hover {
   scale: 1.05;
+}
+.main-container .left-container #idle-container .idle-item:active {
+  animation: pulse 0.1s;
 }
 .main-container .middle-container {
   position: relative;

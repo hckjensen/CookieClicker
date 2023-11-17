@@ -85,7 +85,7 @@ body{
     .left-container{
         
 
-        #upgrades-container {
+        #idle-container {
             display: flex;
             gap: $marginSmall;
             flex-direction: column;
@@ -93,7 +93,7 @@ body{
             margin-left: $marginSmall;
 
 
-            .upgradeItem {
+            .idle-item {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
@@ -107,6 +107,10 @@ body{
 
                 &:hover{
                     scale: 1.05;
+                }
+
+                &:active{
+                    animation: pulse 0.1s;
                 }
 
             }

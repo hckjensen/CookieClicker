@@ -1,23 +1,3 @@
-const circle = document.getElementById('circle')
-const dollars = document.getElementById('dollars')
-const balance = document.getElementById('balance')
-
-let count = 0
-balance.innerHTML = `$${count}`
-
-
-
-//ADD DOLLAR FUNCTION
-function addDollar() { 
-    count++;
-    balance.innerHTML = `$${count}`;
-}
-
-//On circle click
-circle.addEventListener('click', addDollar) 
-
-
-
 //Colorpick
 const colorPickItems = document.getElementsByClassName('colorpickItem');
 const colorPickArray = Array.from(colorPickItems); // convert NodeList above to array
@@ -49,4 +29,3 @@ newColors.addEventListener('click', () => {
         colorPickItem.style.backgroundColor = colorArray[index]
     })
 })
-

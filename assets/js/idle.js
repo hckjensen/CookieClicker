@@ -1,5 +1,8 @@
 const container = document.getElementById('idle-container');
-const idleArray = [];
+
+
+
+const idleArray = []; 
 
 
 //Create elements + array
@@ -13,16 +16,20 @@ for(let i = 1; i < 11; i++ ) {
     </div>`
     container.appendChild(newElement);
     idleArray.push(newElement);
+    idleArray.forEach((item, i) => {
+        const idleCount = document.getElementById(`idleCount${i+1}`)
+        let count = 0
+        item.addEventListener('click', () =>{
+            count++;
+            idleCount.innerHTML = `${count}`;
+        } )
+    })
     
 }
 console.log(idleArray);
 
 //buy function
 
-idleArray.forEach((item) => {
-    item.addEventListener('click', () =>{
-        console.log(item);
-    } )
-})
+
 
 

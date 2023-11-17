@@ -1,8 +1,18 @@
 $borderW: 2px;
 $circleHeight: 400px;
 $circleWidth: $circleHeight;
+
+
+
+// Spacing
+
+$marginSmall: 20px;
+
+
+
+//Colors, etc.
 $background: #302e2e;
 $menuColor: #1b1a1a;
-$menuShadow: rgba(14, 30, 37, 0.52) 0px -2px 4px 10px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+$menuShadow:rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 $circleColor: rgb(180, 58, 119);
 $textColor: #45fc45;

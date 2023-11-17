@@ -83,8 +83,34 @@ body{
     color:$textColor;
 
     .left-container{
-        @include border();
+        
 
+        #upgrades-container {
+            display: flex;
+            gap: $marginSmall;
+            flex-direction: column;
+            margin-top: $marginSmall;
+            margin-left: $marginSmall;
+
+
+            .upgradeItem {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 50px;
+                width: 80%;
+                cursor: pointer;
+                user-select: none;
+                @include border();
+                background-color: $menuColor;
+                box-shadow: $menuShadow;
+
+                &:hover{
+                    scale: 1.05;
+                }
+
+            }
+        }
         
     }
     

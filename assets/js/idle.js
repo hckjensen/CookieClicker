@@ -1,11 +1,14 @@
+import { $PrSec, buyIdleItem, dollarCount } from "./global.js";
+import { subtractDollar } from "./global.js";
+
 const container = document.getElementById('idle-container');
-import { dollarCount } from "./global.js";
+export const prSec = document.getElementById('pr-second')
 
 
 const idleArray = []; 
 let price = 10
 
-//Create elements + array
+//Create elements and push to array
 for(let i = 1; i < 11; i++ ) {
     let newElement = document.createElement('div');
     newElement.innerHTML = 
@@ -16,21 +19,27 @@ for(let i = 1; i < 11; i++ ) {
     </div>`
     container.appendChild(newElement);
     idleArray.push(newElement);
-    idleArray.forEach((item, i) => {
-        const idleCount = document.getElementById(`idleCount${i+1}`)
-        const idlePrice = document.getElementById(`idlePrice${i+1}`)
-        const priceInt = parseInt(idlePrice.textContent.slice(1))
-        let count = 0
-        item.addEventListener('click', () =>{
-            if(dollarCount >= priceInt){
-                console.log(+idlePrice.textContent.slice(1));
-                count++;
-                idleCount.innerHTML = `${count}`;
-        }
-        } )
-    })
     
 }
+
+
+
+// Add buy function to each item
+idleArray.forEach((item, i) => {
+    const idleCount = document.getElementById(`idleCount${i+1}`)
+    const idlePrice = document.getElementById(`idlePrice${i+1}`)
+    const priceInt = parseInt(idlePrice.textContent.slice(1));
+    let count = 0
+    item.addEventListener('click', () =>{
+        if(dollarCount >= priceInt){
+            console.log(+idlePrice.textContent.slice(1));
+            count++;
+            idleCount.innerHTML = `${count}`;
+            subtractDollar(priceInt);
+            balance.innerHTML = `$${dollarCount}`
+    }
+    } )
+})
 
 
 

@@ -1,12 +1,36 @@
+import { prSec } from "./idle.js";
+
+
 export let dollarCount = 0;
+export let $PrSec = 0;
+prSec.innerHTML = `$${$PrSec}/s`
+
+
 export function addDollar() { 
     
-    dollarCount++;
+    dollarCount += 10000;
     balance.innerHTML = `$${dollarCount}`;
 }
 
-export function subtractDollar() {
+export function subtractDollar(x) {
 
-    dollarCount;
+    dollarCount -= x;
+    
 }
 
+export function buyIdleItem() {
+    
+    if(dollarCount >= priceInt){
+        console.log(+idlePrice.textContent.slice(1));
+        count++;
+        idleCount.innerHTML = `${count}`;
+        subtractDollar(priceInt);
+        balance.innerHTML = `$${dollarCount}`
+        
+}
+}
+
+
+function idleAddDollar() {
+
+}

@@ -42,28 +42,28 @@ body {
   margin: auto;
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(1) {
-  background-color: rgb(221, 120, 235);
+  background-color: rgb(250, 53, 6);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(2) {
-  background-color: rgb(83, 4, 83);
+  background-color: rgb(182, 195, 92);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(3) {
-  background-color: rgb(44, 252, 38);
+  background-color: rgb(45, 138, 97);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(4) {
-  background-color: rgb(208, 6, 63);
+  background-color: rgb(84, 73, 52);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(5) {
-  background-color: rgb(26, 94, 182);
+  background-color: rgb(135, 73, 222);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(6) {
-  background-color: rgb(20, 175, 118);
+  background-color: rgb(112, 1, 53);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(7) {
-  background-color: rgb(197, 3, 40);
+  background-color: rgb(163, 124, 67);
 }
 #colorpicker .colorGrid .colorpickItem:nth-child(8) {
-  background-color: rgb(118, 158, 65);
+  background-color: rgb(182, 183, 157);
 }
 #colorpicker .colorGrid .colorpickItem {
   height: 80px;
@@ -158,6 +158,9 @@ body {
      -moz-user-select: none;
           user-select: none;
   font-size: 2em;
+}
+.main-container .middle-container .dollars #pr-second {
+  text-align: center;
 }
 .main-container .middle-container .circle {
   height: 400px;

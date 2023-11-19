@@ -1,14 +1,14 @@
-import { prSec } from "./idle.js";
+import { $PrSec } from "./idle.js";
 
 
 export let dollarCount = 0;
-export let $PrSec = 0;
-prSec.innerHTML = `$${$PrSec}/s`
+
+
 
 
 export function addDollar() { 
     
-    dollarCount += 10000;
+    dollarCount += 1;
     balance.innerHTML = `$${dollarCount}`;
 }
 
@@ -32,5 +32,9 @@ export function buyIdleItem() {
 
 
 function idleAddDollar() {
-
+    dollarCount += $PrSec
+    balance.innerHTML = `$${dollarCount}`;
 }
+setInterval(idleAddDollar, 1000)
+
+
